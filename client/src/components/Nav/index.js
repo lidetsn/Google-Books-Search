@@ -6,13 +6,13 @@ class Nav extends Component {
   
   render() {
     return (
-      <nav className="navbar navbar-expand-lg  mb-2">
-        <Link className="navbar-brand" to="/">
+      <nav className="navbar navbar-expand-lg  mb-2 bg-dark">
+        <Link className="navbar-brand text-white" to="/">
           Google Books
         </Link>
       
           <ul className="navbar-nav">
-            <li className="nav-item">
+            <li className="nav-item text-white">
               <Link
                 onClick={this.toggleNav}
                 className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}
@@ -21,7 +21,7 @@ class Nav extends Component {
                 Home
               </Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item text-white">
               <Link
                 onClick={this.toggleNav}
                 className={window.location.pathname === "/saved" ? "nav-link active" : "nav-link"}

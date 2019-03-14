@@ -1,10 +1,11 @@
 import React from "react";
+import "./card.css"
 
 function Card({ icon, title, children }) {
   return (
     <div className="card mt-3">
       <div className="card-header">
-        <h3>
+        <h3 className="text-primary">
           <strong>
             <i className={`fa fa-${icon}`} aria-hidden="true" /> {title}
           </strong>

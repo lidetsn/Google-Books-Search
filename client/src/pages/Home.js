@@ -11,7 +11,7 @@ import { List } from "../components/List";
 class Home extends Component {
   state = {
     books: [],
-    q: "",
+    query: "",
   
   };
 
@@ -23,7 +23,7 @@ class Home extends Component {
   };
 
   getBooks = () => {
-    API.getBooks(this.state.q)
+    API.getBooks(this.state.query)
       .then(res =>
         this.setState({
           books: res.data
@@ -32,7 +32,7 @@ class Home extends Component {
       .catch(() =>
         this.setState({
           books: [],
-          message: "No New Books Found, Try a Different Query"
+          message: "No New Books Found,"
         })
       );
   };
@@ -67,7 +67,7 @@ class Home extends Component {
               <Form
                 handleInputChange={this.handleInputChange}
                 handleFormSubmit={this.handleFormSubmit}
-                q={this.state.q}
+                query={this.state.query}
               />
             </Card>
           </Col>
